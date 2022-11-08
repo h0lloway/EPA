@@ -35,8 +35,8 @@ $('a[href*="#"]').on('click', function () {
 // BURGER
 
 $(document).ready(function () {
-  $('.nav__burger').click(function (event) {
-    $('.nav__burger,.nav__list').toggleClass('active');
+  $('.btns__burger').click(function (event) {
+    $('.btns__burger,.nav__list').toggleClass('active');
     $('body').toggleClass('lock');
   });
 });
@@ -78,6 +78,16 @@ const benefitsSwiper = new Swiper('.benefits__swiper', {
   // Optional parameters
   slidesPerView: 3,
   spaceBetween: 20,
+  breakpoints: {
+    720: {
+      slidesPerGroup: 1,
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerGroup: 1,
+      slidesPerView: 3,
+    }
+  },
   // loop: true,
 
   // If we need pagination
@@ -97,8 +107,23 @@ const benefitsSwiper = new Swiper('.benefits__swiper', {
 const reviewsSwiper = new Swiper('.reviews__swiper', {
   // Optional parameters
   slidesPerView: 3,
+  slidesPerGroup: 1,
   spaceBetween: 20,
   // loop: true,
+  breakpoints: {
+    210: {
+      slidesPerGroup: 1,
+      slidesPerView: 1,
+    },
+    720: {
+      slidesPerGroup: 1,
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerGroup: 1,
+      slidesPerView: 3,
+    }
+  },
 
   // If we need pagination
   pagination: {
